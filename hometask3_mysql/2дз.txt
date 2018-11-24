@@ -1,0 +1,79 @@
+use kasianova;
+
+ALTER TABLE `cities` CONVERT TO CHAR SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE `countries` CONVERT TO CHAR SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE `regions` CONVERT TO CHAR SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+тренеровка:
+SELECT `title`, `important`, `region_id` FROM `cities` ORDER BY `title` DESC;
+SELECT `title`, `important`, `region_id` FROM `cities` WHERE `region_id` = 50;
+SELECT `title`, `important`, `region_id` FROM `cities` WHERE `title` = 'Красногорск';
+SELECT  `title`, `important`, `region_id` FROM `cities` WHERE `region_id` IN (15,25,33,55);
+SELECT  `title`, `important`, `region_id` FROM `cities` WHERE `title` REGEXP '^К';
+SELECT MAX(`region_id`) AS `region` FROM `cities` WHERE `important` = 1;
+SELECT COUNT(`id`) FROM `cities`; 
+
+SELECT * FROM `cities` 
+
+LEFT JOIN (`countries`, `regions`)
+
+ON (`countries`.id=`cities`.`title` AND `regions`.`title`=`cities`.`important`)
+--------------------------------------------------------------------------------------------------------------------------
+ДЗ 1:
+1)SELECT * FROM `countries` INNER JOIN `regions`; (вывели две таблицы)
+SELECT `cities`.`title`, `regions`.`title`, `regions`.`contry_id`  FROM `cities` 
+
+RIGHT JOIN `regions` 
+
+ON(`regions`.`contry_id`=`cities`.`contry_id`); (получилось вывести название города, название области и ID страны, хотела вместо ID страны вывести название страны, не получилось)
+2)SELECT  `title`, `id` FROM  `regions` WHERE `title` LIKE 'М%'; (вывели просто Московскую область и ID региона)
+ 
+SELECT `cities`.`title` AS `Город`, `regions`.`title` AS `Область`
+FROM `cities`, `regions` 
+
+WHERE `cities`.`region_id`=`regions`.`id` 
+AND 
+ `regions`.`title` REGEXP '^М'; (вывели список городов из московской области)
+-------------------------------------------------------------------------------------------------------------------------
+ДЗ 2:
+1)SELECT `otdel`, AVG(`salary`) AS `Средняя зарплата` FROM `stat` GROUP BY `otdel`;
+
+2)SELECT `lastname`, MAX(`salary`) AS `Максимальная зарплата` FROM `stat` GROUP BY `lastname`;
+
+3)1 способ:
+SELECT `lastname`, MAX(`salary`) AS `max` FROM `stat` 
+WHERE `otdel` 
+GROUP BY `lastname` 
+HAVING  `max` >=158000 LIMIT 1;(сотрудник Горохова)
+ 
+2 способ:
+SELECT `lastname`, MAX(`salary`) AS `max` FROM `stat`
+
+WHERE `otdel` 
+
+GROUP BY `lastname` 
+
+ORDER BY `max` DESC
+LIMIT 1;(сотрудник Горохова)
+ 
+DELETE FROM `stat` WHERE `id` = 16; (удалили Горохову)
+
+4)SELECT `deportament`.`name`, COUNT(*) AS 'кол-во сотрудников' 
+
+FROM `deportament` 
+
+LEFT JOIN `stat`
+
+ON `stat`.`otdel` = `deportament`.`id_dep` 
+GROUP BY `deportament`.`id_dep`, `deportament`.`name`; 
+
+5)SELECT `deportament`.`name` AS 'Название отдела', 
+COUNT(*) AS 'Кол-во сотрудников',
+
+SUM(`stat`.`salary`) AS 'Общая Зарплата'
+FROM `deportament` 
+
+LEFT JOIN `stat`
+ON `stat`.`otdel` = `deportament`.`id_dep` 
+
+GROUP BY `deportament`.`id_dep`, `deportament`.`name`;  
