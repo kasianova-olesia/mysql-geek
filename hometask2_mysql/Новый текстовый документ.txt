@@ -1,0 +1,62 @@
+ДЗ 3
+1. Создать VIEW на основе запросов, которые вы сделали в ДЗ к уроку 3.
+CREATE VIEW `count_stat` AS
+
+SELECT `deportament`.`name`, COUNT(*) AS 'кол-во сотрудников' 
+
+FROM `deportament` 
+LEFT JOIN `stat`
+
+ON `stat`.`otdel` = `deportament`.`id_dep` 
+
+GROUP BY `deportament`.`id_dep`, `deportament`.`name`; 
+
+CREATE VIEW `sumary_salary` AS
+
+SELECT `deportament`.`name` AS 'Название отдела', 
+
+COUNT(*) AS 'Кол-во сотрудников',
+
+SUM(`stat`.`salary`) AS 'Общая Зарплата'
+FROM `deportament` 
+
+LEFT JOIN `stat`
+
+ON `stat`.`otdel` = `deportament`.`id_dep` 
+
+GROUP BY `deportament`.`id_dep`, `deportament`.`name`; 
+
+CREATE VIEW `max_salary` AS
+
+SELECT `lastname`, MAX(`salary`) AS `max` 
+FROM `stat`
+WHERE `otdel` 
+
+GROUP BY `lastname` 
+ORDER BY `max` DESC;
+
+2.  Создать функцию, которая найдет менеджера по имени и фамилии.
+DELIMITER &&
+
+CREATE FUNCTION `id_sotr` (a_name VARCHAR(50), a_lastname VARCHAR(50))
+
+RETURNS INT
+
+READS SQL DATA
+
+BEGIN
+
+RETURN (SELECT `id` FROM `stat` WHERE `name` = 'a_name' AND `lastname` = 'a_lastname');
+
+END&&
+
+DELIMITER ;
+SELECT `id_sotr`('Денис', 'Сусленников');
+3.  Создать триггер, который при добавлении нового сотрудника будет выплачивать ему вступительный бонус, занося запись об этом в таблицу salary.
+
+CREATE TRIGGER `bonus`
+
+AFTER INSERT ON `stat`
+FOR EACH ROW
+
+INSERT INTO `salary` (`id_sotr`, `bonus`, `date`) VALUES(NEW.id, NEW.salary,NOW());
