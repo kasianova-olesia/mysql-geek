@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 --
--- Host: 192.168.0.105    Database: sotrudniki
+-- Host: 192.168.0.101    Database: sotrudniki
 -- ------------------------------------------------------
 -- Server version	8.0.12
 
@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `deportament`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `deportament` (
   `id_dep` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `head` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `head` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_dep`),
   KEY `name_ind` (`name`),
   KEY `dep_ind` (`id_dep`)
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-26 14:55:59
+-- Dump completed on 2018-11-17 13:35:03
