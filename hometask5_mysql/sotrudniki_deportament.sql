@@ -16,29 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `salary`
+-- Table structure for table `deportament`
 --
 
-DROP TABLE IF EXISTS `salary`;
+DROP TABLE IF EXISTS `deportament`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `salary` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_sotr` int(11) NOT NULL,
-  `bonus` int(11) DEFAULT NULL,
-  `date` date DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `deportament` (
+  `id_dep` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `head` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_dep`),
+  KEY `name_ind` (`name`),
+  KEY `dep_ind` (`id_dep`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `salary`
+-- Dumping data for table `deportament`
 --
 
-LOCK TABLES `salary` WRITE;
-/*!40000 ALTER TABLE `salary` DISABLE KEYS */;
-INSERT INTO `salary` VALUES (1,41,148000,'2018-11-24');
-/*!40000 ALTER TABLE `salary` ENABLE KEYS */;
+LOCK TABLES `deportament` WRITE;
+/*!40000 ALTER TABLE `deportament` DISABLE KEYS */;
+INSERT INTO `deportament` VALUES (1,'WEB','Игнатьев'),(2,'Phyton','Маркелов'),(3,'mySql','Савчиц'),(4,'PHP','Муковнин');
+/*!40000 ALTER TABLE `deportament` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-24 13:37:08
+-- Dump completed on 2018-11-26 14:55:59
