@@ -1,0 +1,188 @@
+You can now run MongoDB binaries
+
+C:\Users\ILIA\Desktop\MongoDB\Data\home>mongo
+MongoDB shell version: 3.2.8
+connecting to: test
+Server has startup warnings:
+2018-11-28T14:24:36.065+0300 I CONTROL  [initandlisten]
+2018-11-28T14:24:36.065+0300 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-11-28T14:24:36.065+0300 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-11-28T14:24:36.065+0300 I CONTROL  [initandlisten]
+> use cities
+switched to db cities
+> db.cities.insert({"id":"1", "contry_id":"1","important":"1", "region_id":"50", "title":"Москва"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"2", "contry_id":"1","important":"1", "region_id":"50", "title":"Подольск"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"3", "contry_id":"1","important":"1", "region_id":"50", "title":"Химки"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"4", "contry_id":"1","important":"1", "region_id":"50", "title":"Королев"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"5", "contry_id":"1","important":"1", "region_id":"50", "title":"Люберцы"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"10", "contry":"Россия","important":"Москва", "region":"50", "title":"Красногорск"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"11", "contry":"Россия","important":"Москва", "region":"50", "title":"Коломна"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"12", "contry":"Россия","important":"Москва", "region":"50", "title":"Одинцово"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"13", "contry":"Россия","important":"Москва", "region":"50", "title":"Серпухов"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"14", "contry":"Россия","important":"Москва", "region":"50", "title":"Щелково"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"15", "contry":"Россия","important":"Москва", "region":"50", "title":"Домодедово"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"16", "contry":"Казахстан","important":"Алма-Ата", "region":"26", "title":"Караганда"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"17", "contry":"Казахстан","important":"Алма-Ата", "region":"26", "title":"Темиртау"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"18", "contry":"Казахстан","important":"Алма-Ата", "region":"26", "title":"Жезказган"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"19", "contry":"Казахстан","important":"Алма-Ата", "region":"26", "title":"Алма-Ата"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"20", "contry":"Казахстан","important":"Алма-Ата", "region":"26", "title":"Тараз"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"21", "contry":"Украина","important":"Киев", "region":"15", "title":"Жлобин"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"21", "contry":"Украина","important":"Киев", "region":"15", "title":"Чернигов"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"23", "contry":"Украина","important":"Киев", "region":"15", "title":"Львов"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"24", "contry":"Украина","important":"Киев", "region":"15", "title":"Харьков"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"25", "contry":"Украина","important":"Киев", "region":"15", "title":"Киев"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"26", "contry":"Белорусия","important":"Минск", "region":"55", "title":"Брест"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"27", "contry":"Белорусия","important":"Минск", "region":"55", "title":"Витебск"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"28", "contry":"Белорусия","important":"Минск", "region":"55", "title":"Орша"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"29", "contry":"Белорусия","important":"Минск", "region":"55", "title":"Речица"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"30", "contry":"Белорусия","important":"Минск", "region":"55", "title":"Мозырь"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.insert({"id":"31", "contry":"Белорусия","important":"Минск", "region":"55", "title":"Минск"})
+WriteResult({ "nInserted" : 1 })
+> db.cities.find()
+{ "_id" : ObjectId("5bfe828c010c6a3fa2654221"), "id" : "1", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Москва" }
+{ "_id" : ObjectId("5bfe82f5010c6a3fa2654222"), "id" : "2", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Подольск" }
+{ "_id" : ObjectId("5bfe830e010c6a3fa2654223"), "id" : "3", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Химки" }
+{ "_id" : ObjectId("5bfe8327010c6a3fa2654224"), "id" : "4", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Королев" }
+{ "_id" : ObjectId("5bfe8366010c6a3fa2654225"), "id" : "5", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Люберцы" }
+{ "_id" : ObjectId("5bfe83a8010c6a3fa2654226"), "id" : "10", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Красногорск" }
+{ "_id" : ObjectId("5bfe83ca010c6a3fa2654227"), "id" : "11", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Коломна" }
+{ "_id" : ObjectId("5bfe83e4010c6a3fa2654228"), "id" : "12", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Одинцово" }
+{ "_id" : ObjectId("5bfe8402010c6a3fa2654229"), "id" : "13", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Серпухов" }
+{ "_id" : ObjectId("5bfe8428010c6a3fa265422a"), "id" : "14", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Щелково" }
+{ "_id" : ObjectId("5bfe8445010c6a3fa265422b"), "id" : "15", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Домодедово" }
+{ "_id" : ObjectId("5bfe84b9010c6a3fa265422c"), "id" : "16", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Караганда" }
+{ "_id" : ObjectId("5bfe84d5010c6a3fa265422d"), "id" : "17", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Темиртау" }
+{ "_id" : ObjectId("5bfe84f6010c6a3fa265422e"), "id" : "18", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Жезказган" }
+{ "_id" : ObjectId("5bfe8516010c6a3fa265422f"), "id" : "19", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Алма-Ата" }
+{ "_id" : ObjectId("5bfe852e010c6a3fa2654230"), "id" : "20", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Тараз" }
+{ "_id" : ObjectId("5bfe8570010c6a3fa2654231"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Жлобин" }
+{ "_id" : ObjectId("5bfe859e010c6a3fa2654232"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Чернигов" }
+{ "_id" : ObjectId("5bfe85b7010c6a3fa2654233"), "id" : "23", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Львов" }
+{ "_id" : ObjectId("5bfe85cf010c6a3fa2654234"), "id" : "24", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Харьков" }
+Type "it" for more
+> db.cities.find({"contry":"Россия"})
+{ "_id" : ObjectId("5bfe83a8010c6a3fa2654226"), "id" : "10", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Красногорск" }
+{ "_id" : ObjectId("5bfe83ca010c6a3fa2654227"), "id" : "11", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Коломна" }
+{ "_id" : ObjectId("5bfe83e4010c6a3fa2654228"), "id" : "12", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Одинцово" }
+{ "_id" : ObjectId("5bfe8402010c6a3fa2654229"), "id" : "13", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Серпухов" }
+{ "_id" : ObjectId("5bfe8428010c6a3fa265422a"), "id" : "14", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Щелково" }
+{ "_id" : ObjectId("5bfe8445010c6a3fa265422b"), "id" : "15", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Домодедово" }
+> db.cities.find({"important":"Алма-Ата"})
+{ "_id" : ObjectId("5bfe84b9010c6a3fa265422c"), "id" : "16", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Караганда" }
+{ "_id" : ObjectId("5bfe84d5010c6a3fa265422d"), "id" : "17", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Темиртау" }
+{ "_id" : ObjectId("5bfe84f6010c6a3fa265422e"), "id" : "18", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Жезказган" }
+{ "_id" : ObjectId("5bfe8516010c6a3fa265422f"), "id" : "19", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Алма-Ата" }
+{ "_id" : ObjectId("5bfe852e010c6a3fa2654230"), "id" : "20", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Тараз" }
+> db.cities.find({"region":{$in:[26,15]}})
+> db.cities.find({"region":{$gt:15}})
+> db.cities.find({"region":{$lt:15}})
+> db.cities.update({"contry":"1"}), {$set:{"contry":"Россия"}})
+2018-11-29T14:30:00.894+0300 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:60
+
+> db.cities.update({"contry_id":"1"}), {$set:{"contry":"Россия"}})
+2018-11-29T14:31:16.340+0300 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:63
+
+> db.cities.update({"contry_id":"1"}, {$set:{"contry":"Россия"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.cities.find()
+{ "_id" : ObjectId("5bfe828c010c6a3fa2654221"), "id" : "1", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Москва", "contry" : "Россия" }
+{ "_id" : ObjectId("5bfe82f5010c6a3fa2654222"), "id" : "2", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Подольск" }
+{ "_id" : ObjectId("5bfe830e010c6a3fa2654223"), "id" : "3", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Химки" }
+{ "_id" : ObjectId("5bfe8327010c6a3fa2654224"), "id" : "4", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Королев" }
+{ "_id" : ObjectId("5bfe8366010c6a3fa2654225"), "id" : "5", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Люберцы" }
+{ "_id" : ObjectId("5bfe83a8010c6a3fa2654226"), "id" : "10", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Красногорск" }
+{ "_id" : ObjectId("5bfe83ca010c6a3fa2654227"), "id" : "11", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Коломна" }
+{ "_id" : ObjectId("5bfe83e4010c6a3fa2654228"), "id" : "12", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Одинцово" }
+{ "_id" : ObjectId("5bfe8402010c6a3fa2654229"), "id" : "13", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Серпухов" }
+{ "_id" : ObjectId("5bfe8428010c6a3fa265422a"), "id" : "14", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Щелково" }
+{ "_id" : ObjectId("5bfe8445010c6a3fa265422b"), "id" : "15", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Домодедово" }
+{ "_id" : ObjectId("5bfe84b9010c6a3fa265422c"), "id" : "16", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Караганда" }
+{ "_id" : ObjectId("5bfe84d5010c6a3fa265422d"), "id" : "17", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Темиртау" }
+{ "_id" : ObjectId("5bfe84f6010c6a3fa265422e"), "id" : "18", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Жезказган" }
+{ "_id" : ObjectId("5bfe8516010c6a3fa265422f"), "id" : "19", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Алма-Ата" }
+{ "_id" : ObjectId("5bfe852e010c6a3fa2654230"), "id" : "20", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Тараз" }
+{ "_id" : ObjectId("5bfe8570010c6a3fa2654231"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Жлобин" }
+{ "_id" : ObjectId("5bfe859e010c6a3fa2654232"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Чернигов" }
+{ "_id" : ObjectId("5bfe85b7010c6a3fa2654233"), "id" : "23", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Львов" }
+{ "_id" : ObjectId("5bfe85cf010c6a3fa2654234"), "id" : "24", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Харьков" }
+Type "it" for more
+> db.cities.update({"contry_id":"1"}, {$set:{"contry":"Россия"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
+> db.cities.find()
+{ "_id" : ObjectId("5bfe828c010c6a3fa2654221"), "id" : "1", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Москва", "contry" : "Россия" }
+{ "_id" : ObjectId("5bfe82f5010c6a3fa2654222"), "id" : "2", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Подольск" }
+{ "_id" : ObjectId("5bfe830e010c6a3fa2654223"), "id" : "3", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Химки" }
+{ "_id" : ObjectId("5bfe8327010c6a3fa2654224"), "id" : "4", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Королев" }
+{ "_id" : ObjectId("5bfe8366010c6a3fa2654225"), "id" : "5", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Люберцы" }
+{ "_id" : ObjectId("5bfe83a8010c6a3fa2654226"), "id" : "10", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Красногорск" }
+{ "_id" : ObjectId("5bfe83ca010c6a3fa2654227"), "id" : "11", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Коломна" }
+{ "_id" : ObjectId("5bfe83e4010c6a3fa2654228"), "id" : "12", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Одинцово" }
+{ "_id" : ObjectId("5bfe8402010c6a3fa2654229"), "id" : "13", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Серпухов" }
+{ "_id" : ObjectId("5bfe8428010c6a3fa265422a"), "id" : "14", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Щелково" }
+{ "_id" : ObjectId("5bfe8445010c6a3fa265422b"), "id" : "15", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Домодедово" }
+{ "_id" : ObjectId("5bfe84b9010c6a3fa265422c"), "id" : "16", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Караганда" }
+{ "_id" : ObjectId("5bfe84d5010c6a3fa265422d"), "id" : "17", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Темиртау" }
+{ "_id" : ObjectId("5bfe84f6010c6a3fa265422e"), "id" : "18", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Жезказган" }
+{ "_id" : ObjectId("5bfe8516010c6a3fa265422f"), "id" : "19", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Алма-Ата" }
+{ "_id" : ObjectId("5bfe852e010c6a3fa2654230"), "id" : "20", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Тараз" }
+{ "_id" : ObjectId("5bfe8570010c6a3fa2654231"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Жлобин" }
+{ "_id" : ObjectId("5bfe859e010c6a3fa2654232"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Чернигов" }
+{ "_id" : ObjectId("5bfe85b7010c6a3fa2654233"), "id" : "23", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Львов" }
+{ "_id" : ObjectId("5bfe85cf010c6a3fa2654234"), "id" : "24", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Харьков" }
+Type "it" for more
+> db.sities.update({"region_id":{$exists:true}}, {$rename:{"contry_id":"contry"}}, true, true)
+WriteResult({
+        "nMatched" : 0,
+        "nUpserted" : 1,
+        "nModified" : 0,
+        "_id" : ObjectId("5bffd0f10f0e9bf40a13cf94")
+})
+> db.cities.find()
+{ "_id" : ObjectId("5bfe828c010c6a3fa2654221"), "id" : "1", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Москва", "contry" : "Россия" }
+{ "_id" : ObjectId("5bfe82f5010c6a3fa2654222"), "id" : "2", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Подольск" }
+{ "_id" : ObjectId("5bfe830e010c6a3fa2654223"), "id" : "3", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Химки" }
+{ "_id" : ObjectId("5bfe8327010c6a3fa2654224"), "id" : "4", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Королев" }
+{ "_id" : ObjectId("5bfe8366010c6a3fa2654225"), "id" : "5", "contry_id" : "1", "important" : "1", "region_id" : "50", "title" : "Люберцы" }
+{ "_id" : ObjectId("5bfe83a8010c6a3fa2654226"), "id" : "10", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Красногорск" }
+{ "_id" : ObjectId("5bfe83ca010c6a3fa2654227"), "id" : "11", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Коломна" }
+{ "_id" : ObjectId("5bfe83e4010c6a3fa2654228"), "id" : "12", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Одинцово" }
+{ "_id" : ObjectId("5bfe8402010c6a3fa2654229"), "id" : "13", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Серпухов" }
+{ "_id" : ObjectId("5bfe8428010c6a3fa265422a"), "id" : "14", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Щелково" }
+{ "_id" : ObjectId("5bfe8445010c6a3fa265422b"), "id" : "15", "contry" : "Россия", "important" : "Москва", "region" : "50", "title" : "Домодедово" }
+{ "_id" : ObjectId("5bfe84b9010c6a3fa265422c"), "id" : "16", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Караганда" }
+{ "_id" : ObjectId("5bfe84d5010c6a3fa265422d"), "id" : "17", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Темиртау" }
+{ "_id" : ObjectId("5bfe84f6010c6a3fa265422e"), "id" : "18", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Жезказган" }
+{ "_id" : ObjectId("5bfe8516010c6a3fa265422f"), "id" : "19", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Алма-Ата" }
+{ "_id" : ObjectId("5bfe852e010c6a3fa2654230"), "id" : "20", "contry" : "Казахстан", "important" : "Алма-Ата", "region" : "26", "title" : "Тараз" }
+{ "_id" : ObjectId("5bfe8570010c6a3fa2654231"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Жлобин" }
+{ "_id" : ObjectId("5bfe859e010c6a3fa2654232"), "id" : "21", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Чернигов" }
+{ "_id" : ObjectId("5bfe85b7010c6a3fa2654233"), "id" : "23", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Львов" }
+{ "_id" : ObjectId("5bfe85cf010c6a3fa2654234"), "id" : "24", "contry" : "Украина", "important" : "Киев", "region" : "15", "title" : "Харьков" }
+Type "it" for more
+>
